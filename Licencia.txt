@@ -1,0 +1,30 @@
+Contrato de Licencia de Escritura Ágil
+
+Al instalar y usar "Escritura Ágil", aceptas lo siguiente:
+
+1. PROPÓSITO DE LA APLICACIÓN
+   Escritura Ágil es una herramienta para escribir más rápido sin usar los dedos. Consta de dos partes:
+   - Aplicación de escritorio (servidor) en Windows: Recibe audio, lo transcribe y lo escribe como teclado virtual.
+   - Aplicación de Android (cliente): Graba audio y lo envía al servidor.
+
+2. FUNCIONAMIENTO
+   - El servidor usa WebSocket en el puerto 5000 para recibir audio desde la app de Android.
+   - Habilita el puerto 5000 en el Firewall de Windows para permitir esta comunicación.
+   - Usa mDNS (Multicast DNS) para anunciar el nombre de la PC, el servicio, la IP y el puerto 5000 en la red local, así la app de Android puede encontrarlo.
+   - Utiliza el servicio de transcripción de Google para convertir el audio en texto.
+   - Muestra notificaciones de Windows con el texto transcrito y lo escribe en cualquier pantalla activa.
+
+3. PERMISOS Y REQUISITOS
+   - Necesita permisos administrativos para abrir el puerto 5000 y configurar el Firewall.
+   - Accede a la red local para mDNS y WebSocket.
+   - Usa internet para la transcripción con Google.
+   - Simula entrada de teclado para escribir el texto transcrito.
+
+4. RESPONSABILIDAD DEL USUARIO
+   - Asegúrate de que tu red permita mDNS y el puerto 5000.
+   - Aceptas que el audio se envía a Google para su transcripción, sujeto a sus políticas de privacidad.
+
+5. SIN GARANTÍAS
+   Esta aplicación se proporciona "tal cual". Aprende más, Inc. no se responsabiliza por fallos o mal uso.
+
+Si no aceptas estos términos, cancela la instalación.
